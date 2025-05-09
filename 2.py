@@ -10,22 +10,21 @@ class ham(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        button_1=QPushButton("p_1")
-        button_2=QPushButton("P_2")
-        C_l1=QLabel('hey')
-        C_l2=QLabel('bye')
+      b1=QPushButton("BUTTON 1")
+      b2=QPushButton('BUTTON 2')
+      b3=QPushButton('BUTTON 3')
+      label=QLabel('HELLO UTSHO')
+      h=QHBoxLayout()
+      v=QVBoxLayout()
+      h.addWidget(b1)
+      h.addWidget(b2)
+      v.addWidget(label)
+      v.addLayout(h)
+      v.addWidget(b3)
+     
+      self.setLayout(v)
 
-        h_l=QHBoxLayout()
-        h_l.addWidget(button_1)
-        h_l.addWidget(button_2)
-
-        v_l=QVBoxLayout
-        v_l.addWidget(C_l1)
         
-        v_l.addLayout(h_l)
-        v_l.addWidget(C_l2)
-
-        self.setLayout(v_l)
 
     
 
@@ -34,5 +33,5 @@ class ham(QWidget):
 if __name__=="__main__":
     a=QApplication(sys.argv)
     window=ham()
-    window.show
+    window.show()
     sys.exit(a.exec_())
